@@ -1,0 +1,46 @@
+.main_header {
+  padding: 20px 40px;
+  background-color: #272727;
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    list-style: none;
+    color: #b8b8b8;
+    letter-spacing: 10px;
+    font-size: 30px;
+    animation: lighting 2s linear infinite;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    color: #b8b8b8;
+    text-shadow: none;
+  }
+  90% {
+    color: #b8b8b8;
+    text-shadow: none;
+  }
+  100% {
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+  }
+}
+
+// SCSS for loop to apply animation to every letter with +0.1s delay
+$delay: 0.1;
+@for $i from 1 through 15 {
+  ul li:nth-child(#{$i}) {
+    animation-delay: (0.1s + ($i * $delay));
+  }
+}

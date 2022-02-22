@@ -1,0 +1,11 @@
+.hero_section {
+  height: 50vh;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero_title,
+.hero_content {
+  width: 50%;
+}
